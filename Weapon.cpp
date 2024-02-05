@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yachen <yachen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 15:10:41 by yachen            #+#    #+#             */
-/*   Updated: 2024/02/05 16:14:04 by yachen           ###   ########.fr       */
+/*   Created: 2024/02/05 15:33:56 by yachen            #+#    #+#             */
+/*   Updated: 2024/02/05 16:14:10 by yachen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#include "Weapon.hpp"
 
-#include <string>
+Weapon::Weapon( std::string weaponDescription ) : type(weaponDescription) {}
 
-class	Weapon
+Weapon::~Weapon() {}
+
+const std::string& Weapon::getType()
 {
-	private:
+	return type;
+}
 
-		std::string	type;
-
-	public:
-
-		Weapon( std::string weaponDescription );
-		~Weapon();
-		
-		const std::string&	getType();
-		void				setType( std::string otherType);
-};
-
-#endif
+void	Weapon::setType( std::string otherType)
+{
+	type = weaponType;
+}
