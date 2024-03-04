@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   humanA.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yachen <yachen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 15:54:28 by yachen            #+#    #+#             */
-/*   Updated: 2024/02/05 16:05:24 by yachen           ###   ########.fr       */
+/*   Created: 2024/03/04 10:07:23 by yachen            #+#    #+#             */
+/*   Updated: 2024/03/04 12:09:47 by yachen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-HumanA::HumanA( std::string name, Weapon weapon ) : name( name ), weapon(weapon)
-{
-}
+#include "Weapon.hpp"
 
-HumanA::~HumanA() {}
+class	HumanB
+{	
+	private:
+		
+		std::string	name;
+		Weapon		*weapon;
 
-void	HumanA::attack()
-{
-	weapon.getType()
-}
+	public:
+
+		HumanB( std::string name );
+		~HumanB();
+		void	attack();
+		void	setWeapon( Weapon &otherWeapon );
+};
+
+#endif

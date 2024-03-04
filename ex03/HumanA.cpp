@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yachen <yachen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 15:10:41 by yachen            #+#    #+#             */
-/*   Updated: 2024/02/05 16:14:04 by yachen           ###   ########.fr       */
+/*   Created: 2024/02/05 15:54:28 by yachen            #+#    #+#             */
+/*   Updated: 2024/03/04 12:09:15 by yachen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#include "HumanA.hpp"
 
-#include <string>
+HumanA::HumanA( std::string name, Weapon &weapon ) : name( name ), weapon( weapon ) {}
 
-class	Weapon
+HumanA::~HumanA() {}
+
+void	HumanA::attack()
 {
-	private:
-
-		std::string	type;
-
-	public:
-
-		Weapon( std::string weaponDescription );
-		~Weapon();
-		
-		const std::string&	getType();
-		void				setType( std::string otherType);
-};
-
-#endif
+	std::cout << name << " attacks with their " << weapon.getType() << std::endl;
+}
