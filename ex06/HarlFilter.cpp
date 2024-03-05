@@ -6,13 +6,11 @@
 /*   By: yachen <yachen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:09:06 by yachen            #+#    #+#             */
-/*   Updated: 2024/03/05 12:23:36 by yachen           ###   ########.fr       */
+/*   Updated: 2024/03/05 12:26:45 by yachen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HarlFilter.hpp"
-
-typedef void	(HarlFilter::*fPtr)();
 
 void	HarlFilter::debug(void)
 {
