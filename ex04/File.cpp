@@ -6,7 +6,7 @@
 /*   By: yachen <yachen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 12:58:40 by yachen            #+#    #+#             */
-/*   Updated: 2024/03/04 16:45:15 by yachen           ###   ########.fr       */
+/*   Updated: 2024/03/05 12:11:08 by yachen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	File::copieFile()
 	{
 		replaceOcurrences(buffer);
 		newFile << buffer << std::endl;
+		buffer.clear();
 	}
 }
 
